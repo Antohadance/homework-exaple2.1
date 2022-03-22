@@ -21,12 +21,12 @@ public class Main {
         changeValueOfFirst(values);
         System.out.println(Arrays.toString(values));
 
-        Person person = new Person("Anton","Semechkov");
+        Person person = new Person("Anton"," Semechkov");
         changePerson(person);
-        System.out.println(person);
+        System.out.println(person.name + person.surname);
 
         changePersonByFields(person);
-        System.out.println(person);
+        System.out.println(person.name + person.surname);
     }
 
     private static void changeValue(int value) {
@@ -41,12 +41,12 @@ public class Main {
     private static void changeValueOfFirst(Integer[] values) {values[0]= 99;}
 
     private static void changePerson(Person person){
-        new Person("Ilya", "Lagutenko");
+        new Person("Ilya", " Lagutenko");
     }
 
     private static void changePersonByFields(Person person) {
         person.name = "Ilya";
-        person.surname = "Lagutenko";
+        person.surname = " Lagutenko";
     }
     public static class Person {
         String name;
